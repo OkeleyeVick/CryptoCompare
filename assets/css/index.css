@@ -19,6 +19,7 @@
 	--transition: 280ms ease-in-out;
 	--border: 1.5px solid #b6b6b847;
 	--border-clr: #b6b6b847;
+	--red: #c9302c;
 }
 /* variables @e */
 
@@ -101,15 +102,66 @@ main section.coins_table .nav-link:not(.active):hover {
 	border: none;
 }
 
+:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin, .crypto_lists_table_footer) {
+	border-right: var(--border);
+	border-left: var(--border);
+}
+.crypto_lists_table_footer {
+	border-top: var(--border);
+	padding: 0.56rem 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
 :is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 5px;
-	border-right: var(--border);
-	border-left: var(--border);
 }
 .crypto_lists_table_body {
 	border-bottom: var(--border);
+}
+.crypto_lists_table_footer .view_all {
+	flex-grow: 2;
+}
+.crypto_lists_table_footer :is(.view_all a, .live) {
+	column-gap: 8px;
+}
+.crypto_lists_table_footer span {
+	margin-right: 10px;
+	font-weight: 900;
+	font-size: 0.88rem;
+}
+.crypto_lists_table_footer label {
+	font-size: 0.75rem;
+	font-weight: 900;
+	color: var(--white);
+	margin-left: -0.5rem;
+}
+.crypto_lists_table_footer .live > div {
+	padding: 4px 5px;
+	background-color: var(--red);
+	border-radius: 6px;
+}
+.crypto_lists_table_footer .live > div .form-check-input {
+	cursor: pointer;
+	border: 1px solid var(--red);
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" viewBox="0 0 24 24"%3E%3Cpath fill="%23c9302c" d="M12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"%2F%3E%3C%2Fsvg%3E');
+	scale: 0.8;
+}
+.crypto_lists_table_footer .live > div:has(.form-check .form-check-input:checked) {
+	background-color: var(--green-lighter);
+}
+.form-switch .form-check-input:checked {
+	background-color: var(--white);
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" viewBox="0 0 24 24"%3E%3Cpath fill="%2312a733" d="M12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"%2F%3E%3C%2Fsvg%3E') !important;
+	border: 1px solid var(--green-lighter) !important;
+}
+.crypto_lists_table_footer .form-check-input {
+	box-shadow: none;
+}
+.crypto_lists_table_footer .form-chexck:has(.form-check-input:checked) {
+	background-color: var(--green-lighter);
 }
 .crypto_lists_table_header {
 	padding: 0.3rem 0;
