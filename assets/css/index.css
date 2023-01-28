@@ -59,6 +59,10 @@ a {
 
 /* nav bars @s */
 /* ========== large nav bars @s ========= */
+header + .sub-header {
+	position: sticky;
+	top: 0;
+}
 /* ============ large nav bars @e ========== */
 /* ============ mobile nav bars @s ========== */
 /* ============ mobile nav bars @e ========== */
@@ -111,6 +115,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	padding: 0.56rem 0.5em;
 	display: flex;
 	align-items: center;
+	background-color: var(--green-opacity);
 	justify-content: flex-end;
 }
 :is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) {
@@ -123,11 +128,20 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 .crypto_lists_table_footer .view_all {
 	flex-grow: 2;
+	display: flex;
+	justify-content: center;
+}
+.crypto_lists_table_footer .view_all a {
+	border: 1.5px solid var(--green-lighter);
+	color: var(--green-lighter);
+	width: max-content;
+	padding: 0.4rem 1rem;
+	border-radius: 5px;
 }
 .crypto_lists_table_footer :is(.view_all a, .live) {
-	column-gap: 8px;
+	column-gap: 3px;
 }
-.crypto_lists_table_footer span {
+.crypto_lists_table_footer > span {
 	margin-right: 10px;
 	font-weight: 900;
 	font-size: 0.88rem;
@@ -175,6 +189,8 @@ main section.coins_table .nav-link:not(.active):hover {
 .crypto_lists_table_body .each-coin > span {
 	font-size: 0.9rem;
 	text-transform: uppercase;
+	display: grid;
+	align-items: center;
 }
 .crypto_lists_table_body .each-coin > span.num {
 	font-weight: 900;
@@ -194,6 +210,20 @@ main section.coins_table .nav-link:not(.active):hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.crypto_lists_table_body :is(.each-coin, .each-coin *) {
+	-webkit-transition: 180ms ease;
+	-moz-transition: 180ms ease;
+	-ms-transition: 180ms ease;
+	-o-transition: 180ms ease;
+	transition: 180ms ease;
+}
+.crypto_lists_table_body .each-coin:hover {
+	background-color: var(--green-opacity);
+}
+.crypto_lists_table_body .each-coin:hover .num {
+	background-color: var(--green-lighter);
+	color: var(--white);
 }
 :is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) > span {
 	white-space: nowrap;
@@ -246,7 +276,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	display: none;
 }
 .crypto_lists_table_body .each-coin .coin_image img {
-	max-width: 35px;
+	max-width: 28px;
 }
 @media all and (min-width: 375px) {
 	.crypto_lists_table_body .each-coin .coin_image {
