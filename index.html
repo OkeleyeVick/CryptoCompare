@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="./assets/css/index.css" />
+		<title>Cardify | CryptoCompare</title>
+	</head>
+	<body>
+		<div class="body_inner">
+			<main>
+				<!-- section @s -->
+				<section class="coins_table">
+					<div class="section_inner container-lg p-lg-0">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link active"
+									id="coins-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#coins-tab-pane"
+									type="button"
+									role="tab"
+									aria-controls="coins-tab-pane"
+									aria-selected="true">
+									Coins
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link"
+									id="forum-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#forum-tab-pane"
+									type="button"
+									role="tab"
+									aria-controls="forum-tab-pane"
+									aria-selected="false">
+									Forum
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link"
+									id="news-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#news-tab-pane"
+									type="button"
+									role="tab"
+									aria-controls="news-tab-pane"
+									aria-selected="false">
+									News
+								</button>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="coins-tab-pane" role="tabpanel" aria-labelledby="coins-tab" tabindex="0">
+								<div class="crypto_lists_table">
+									<div class="pre_table col-md-11 ms-md-auto"></div>
+									<div class="crypto_lists_table_inner">
+										<div class="crypto_lists_table_header">
+											<!-- table header @s -->
+											<!-- table header @e -->
+											<span class="num has-to-sm-hidden">#</span>
+											<span class="coin">Coin</span>
+											<span class="price"> Price </span>
+											<span class="direct_vol has-to-sm-hidden has-icon">
+												<span>Direct Vol</span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+													<path
+														fill="currentColor"
+														d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42s-42-18.804-42-42s18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+												</svg>
+											</span>
+											<span class="total_vol has-to-sm-hidden">Total Vol</span>
+											<span class="top_tier_vol has-to-sm-hidden">Top Tier Vol</span>
+											<span class="market_cap has-to-md-hidden has-icon">
+												<span>Market Cap</span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+													<path
+														fill="currentColor"
+														d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42s-42-18.804-42-42s18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+												</svg>
+											</span>
+											<span class="icon has-to-md-hidden">
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+													<path
+														fill="currentColor"
+														d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42s-42-18.804-42-42s18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+												</svg>
+											</span>
+											<span class="days has-to-md-hidden">Last 7 Days</span>
+											<span class="date_time">24h</span>
+										</div>
+										<!-- table body @s -->
+										<div class="crypto_lists_table_body">
+											<div class="crypto_lists_table_body_inner">
+												<!-- each-coin info @s -->
+												<div class="each-coin">
+													<span class="num has-to-sm-hidden">1</span>
+													<span class="coin">
+														<a href="">
+															<div class="coin_image">
+																<img src="./assets/images/btc.png" alt="" class="img-fluid" />
+															</div>
+															<div class="coin_names">
+																<span class="coin_fullname">Bitcoin</span>
+																<span class="coin_short">BTC</span>
+															</div>
+														</a>
+													</span>
+													<span class="price"> $ 23,018.85 </span>
+													<span class="direct_vol has-to-sm-hidden">$ 846.79 M</span>
+													<span class="total_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="market_cap has-to-md-hidden">$ 440.67 B</span>
+													<span class="top_tier_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="icon has-to-md-hidden"> B+ </span>
+													<span class="days has-to-md-hidden">
+														<div class="image-container">
+															<img src="./assets/images/bearish_1.png" alt="" class="img-fluid" />
+														</div>
+													</span>
+													<span class="date_time"> -0.47% </span>
+												</div>
+												<!-- each-coin info @e-->
+												<!-- each-coin info @s -->
+												<div class="each-coin">
+													<span class="num has-to-sm-hidden">2</span>
+													<span class="coin">
+														<a href="">
+															<div class="coin_image">
+																<img src="./assets/images/eth.png" alt="" class="img-fluid" />
+															</div>
+															<div class="coin_names">
+																<span class="coin_fullname">Ethereum</span>
+																<span class="coin_short">ETH</span>
+															</div>
+														</a>
+													</span>
+													<span class="price"> $ 23,018.85 </span>
+													<span class="direct_vol has-to-sm-hidden">$ 846.79 M</span>
+													<span class="total_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="market_cap has-to-md-hidden">$ 440.67 B</span>
+													<span class="top_tier_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="icon has-to-md-hidden"> </span>
+													<span class="days has-to-md-hidden">
+														<div class="image-container">
+															<img src="./assets/images/stable_2.png" alt="" class="img-fluid" />
+														</div>
+													</span>
+													<span class="date_time"> -0.47% </span>
+												</div>
+												<!-- each-coin info @e-->
+												<!-- each-coin info @s -->
+												<div class="each-coin">
+													<span class="num has-to-sm-hidden">3</span>
+													<span class="coin">
+														<a href="">
+															<div class="coin_image">
+																<img src="./assets/images/gala.png" alt="" class="img-fluid" />
+															</div>
+															<div class="coin_names">
+																<span class="coin_fullname">Gala</span>
+																<span class="coin_short">gala</span>
+															</div>
+														</a>
+													</span>
+													<span class="price"> $ 23,018.85 </span>
+													<span class="direct_vol has-to-sm-hidden">$ 846.79 M</span>
+													<span class="total_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="market_cap has-to-md-hidden">$ 440.67 B</span>
+													<span class="top_tier_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="icon has-to-md-hidden"> B+ </span>
+													<span class="days has-to-md-hidden">
+														<div class="image-container">
+															<img src="./assets/images/bullish_3.png" alt="" class="img-fluid" />
+														</div>
+													</span>
+													<span class="date_time"> -0.47% </span>
+												</div>
+												<!-- each-coin info @e-->
+												<!-- each-coin info @s -->
+												<div class="each-coin">
+													<span class="num has-to-sm-hidden">4</span>
+													<span class="coin">
+														<a href="">
+															<div class="coin_image">
+																<img src="./assets/images/busd.png" alt="" class="img-fluid" />
+															</div>
+															<div class="coin_names">
+																<span class="coin_fullname">Bitcoin</span>
+																<span class="coin_short">BTC</span>
+															</div>
+														</a>
+													</span>
+													<span class="price"> $ 23,018.85 </span>
+													<span class="direct_vol has-to-sm-hidden">$ 846.79 M</span>
+													<span class="total_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="market_cap has-to-md-hidden">$ 440.67 B</span>
+													<span class="top_tier_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="icon has-to-md-hidden"> B+ </span>
+													<span class="days has-to-md-hidden">
+														<div class="image-container">
+															<img src="./assets/images/bullish_2.png" alt="" class="img-fluid" />
+														</div>
+													</span>
+													<span class="date_time"> -0.47% </span>
+												</div>
+												<!-- each-coin info @e-->
+												<!-- each-coin info @s -->
+												<div class="each-coin">
+													<span class="num has-to-sm-hidden">5</span>
+													<span class="coin">
+														<a href="">
+															<div class="coin_image">
+																<img src="./assets/images/apt.png" alt="" class="img-fluid" />
+															</div>
+															<div class="coin_names">
+																<span class="coin_fullname">Aptos</span>
+																<span class="coin_short">Apt</span>
+															</div>
+														</a>
+													</span>
+													<span class="price"> $ 23,018.85 </span>
+													<span class="direct_vol has-to-sm-hidden">$ 846.79 M</span>
+													<span class="total_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="market_cap has-to-md-hidden">$ 440.67 B</span>
+													<span class="top_tier_vol has-to-sm-hidden">$ 8.98 B</span>
+													<span class="icon has-to-md-hidden"> B+ </span>
+													<span class="days has-to-md-hidden">
+														<div class="image-container">
+															<img src="./assets/images/bearish_1.png" alt="" class="img-fluid" />
+														</div>
+													</span>
+													<span class="date_time"> -0.47% </span>
+												</div>
+												<!-- each-coin info @e-->
+											</div>
+											<div class="crypto_lists_table_footer"></div>
+										</div>
+										<!-- table body @e -->
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="forum-tab-pane" role="tabpanel" aria-labelledby="forum-tab" tabindex="0">...</div>
+							<div class="tab-pane fade" id="news-tab-pane" role="tabpanel" aria-labelledby="news-tab" tabindex="0">...</div>
+						</div>
+					</div>
+				</section>
+				<!-- section @s -->
+				<section class="guides">
+					<div class="section_inner container-lg p-lg-0">
+						<div class="title_container text-center col-md-10 col-lg-7 mx-auto">
+							<div class="section_title">
+								<h1 class="title">Featured Reviews</h1>
+							</div>
+							<div class="section_subcontent text-center">
+								<span>
+									<span class="brand"> CryptoCompare </span> is the perfect place to learn about crypto currencies and start to
+									understand some of the fundamental concepts behind the blockchain.
+								</span>
+							</div>
+						</div>
+						<div class="crypto_news_wrapper">
+							<div class="crypto_news_wrapper_inner">
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- section @e -->
+				<!-- section @s -->
+				<section class="guides">
+					<div class="section_inner container-lg p-lg-0">
+						<div class="title_container text-center col-md-10 col-lg-7 mx-auto">
+							<div class="section_title">
+								<h1 class="title">GUIDES</h1>
+							</div>
+							<div class="section_subcontent text-center">
+								<span>
+									<span class="brand"> CryptoCompare </span> is the perfect place to learn about crypto currencies and start to
+									understand some of the fundamental concepts behind the blockchain.
+								</span>
+							</div>
+						</div>
+						<div class="crypto_news_wrapper">
+							<div class="crypto_news_wrapper_inner">
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+								<!-- news item @e -->
+								<div class="each_news">
+									<div class="sponsor"><small>Sponsored</small></div>
+									<div class="each_news_content">
+										<div class="image-container">
+											<img src="./assets/images/image_meter.jpg" alt="" class="img-fluid" />
+										</div>
+										<div class="text-content">
+											<div class="text-content-title">
+												<a href=""> <h5 class="title">4 Different Ways Bitcoin is Being Used Now and there</h5></a>
+											</div>
+											<div class="text-content-body">
+												<span>
+													Since its creation in 2009, Bitcoin has gained widespread adoption and became an alternative to
+													traditional fiat currencies for several businesses throughout the world. Nowadays, the Bitcoin
+													blockchain is sprawling with economic activity as users exp
+												</span>
+											</div>
+											<div class="text-link">
+												<a href=""> Read all about 4 different days Bitcoin is being used nowadays </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- news item @s -->
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- section @e -->
+			</main>
+			<!-- footer @s -->
+			<footer>
+				<div class="footer_inner">
+					<div class="grid_wrapper_main container p-md-0">
+						<div class="internal_links_wrapper">
+							<!-- each footer link container @s -->
+							<div class="each_container">
+								<h6 class="link_title">Our Company</h6>
+								<ul class="links_container">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Press Releases</a></li>
+									<li><a href="#">Research</a></li>
+									<li><a href="#">Our Timeline</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Website Disclaimer</a></li>
+								</ul>
+							</div>
+							<!-- each footer link container @e-->
+							<!-- each footer link container @s -->
+							<div class="each_container">
+								<h6 class="link_title">Marketing</h6>
+								<ul class="links_container">
+									<li><a href="#">Branding guidelines</a></li>
+									<li><a href="#">Advertise with us</a></li>
+									<li><a href="#">Lastest Newsletters</a></li>
+									<li><a href="#">Newsletter RSS</a></li>
+									<li><a href="#">Submit Content</a></li>
+								</ul>
+							</div>
+							<!-- each footer link container @e-->
+							<!-- each footer link container @s -->
+							<div class="each_container has-icons">
+								<h6 class="link_title">Developers</h6>
+								<ul class="links_container">
+									<li>
+										<a href="#">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 2048 2048">
+												<path
+													fill="currentColor"
+													d="M2048 0v64q0 182-32 340t-99 299t-166 268t-234 249l-191 572h-302v-227q-138 81-279 156l-418-418q75-141 156-279H256V722l572-190q121-135 248-235t269-166t299-98t340-33h64zM558 896q29-46 58-91t62-89l-294 98v82h174zm211 666q51-29 102-57t102-58l-372-372q-29 51-57 102t-58 103l283 282zm563-192q-44 32-89 61t-91 59v174h82l98-294zm183-327q99-99 172-201t124-214t76-235t32-264q-140 5-263 31t-235 77t-215 123t-203 172q-99 97-181 204T668 962l418 418q118-72 225-154t204-183zm-235-19q-53 0-99-20t-82-55t-55-81t-20-100q0-53 20-99t55-82t81-55t100-20q53 0 99 20t82 55t55 81t20 100q0 53-20 99t-55 82t-81 55t-100 20zm0-384q-27 0-50 10t-40 27t-28 41t-10 50q0 27 10 50t27 40t41 28t50 10q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10zM256 1536q53 0 99 20t82 55t55 81t20 100q0 53-20 99t-55 82t-81 55t-100 20H0v-256q0-53 20-99t55-82t81-55t100-20zm0 384q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10q-27 0-50 10t-40 27t-28 41t-10 50v128h128z" />
+											</svg>
+											<span> Widgets </span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+												<path
+													fill="currentColor"
+													d="M71.7 97.2L34.8 128l36.9 30.8a12 12 0 1 1-15.4 18.4l-48-40a12 12 0 0 1 0-18.4l48-40a12 12 0 0 1 15.4 18.4Zm176 21.6l-48-40a12 12 0 0 0-15.4 18.4l37 30.8l-37 30.8a11.9 11.9 0 0 0-1.5 16.9a12.2 12.2 0 0 0 9.2 4.3a12 12 0 0 0 7.7-2.8l48-40a12 12 0 0 0 0-18.4Zm-83.6-90.1a12.1 12.1 0 0 0-15.4 7.2l-64 176a12.1 12.1 0 0 0 7.2 15.4a11.8 11.8 0 0 0 4.1.7a12 12 0 0 0 11.3-7.9l64-176a12.1 12.1 0 0 0-7.2-15.4Z" />
+											</svg>
+											<span> API </span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+												<path
+													fill="currentColor"
+													d="M8 1.5c-2.363 0-4 1.69-4 3.75c0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848c.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25C2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259c-.095.115-.184.22-.268.319c-.207.245-.383.453-.541.681c-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489c.203-.292.45-.584.673-.848c.075-.088.147-.173.213-.253c.561-.679.985-1.32.985-2.304c0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z" />
+											</svg>
+											<span> Turn Off Lights </span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+												<path
+													fill="currentColor"
+													d="M960 95.808H64c-35.184 0-64 28.8-64 64V704c0 35.184 28.816 63.983 64 63.983h416v96.208H320c-17.664 0-32 14.336-32 32s14.336 32 32 32h384c17.664 0 32-14.336 32-32s-14.336-32-32-32H544v-96.208h416c35.184 0 64-28.8 64-63.983V159.808c0-35.2-28.816-64-64-64zM960 704H64V159.808h896V704z" />
+											</svg>
+											<span>Conference Screen</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+												<path
+													fill="none"
+													stroke="currentColor"
+													stroke-miterlimit="10"
+													stroke-width="32"
+													d="M366.05 146a46.7 46.7 0 0 1-2.42-63.42a3.87 3.87 0 0 0-.22-5.26l-44.13-44.18a3.89 3.89 0 0 0-5.5 0l-70.34 70.34a23.62 23.62 0 0 0-5.71 9.24a23.66 23.66 0 0 1-14.95 15a23.7 23.7 0 0 0-9.25 5.71L33.14 313.78a3.89 3.89 0 0 0 0 5.5l44.13 44.13a3.87 3.87 0 0 0 5.26.22a46.69 46.69 0 0 1 65.84 65.84a3.87 3.87 0 0 0 .22 5.26l44.13 44.13a3.89 3.89 0 0 0 5.5 0l180.4-180.39a23.7 23.7 0 0 0 5.71-9.25a23.66 23.66 0 0 1 14.95-15a23.62 23.62 0 0 0 9.24-5.71l70.34-70.34a3.89 3.89 0 0 0 0-5.5l-44.13-44.13a3.87 3.87 0 0 0-5.26-.22a46.7 46.7 0 0 1-63.42-2.32Z" />
+												<path
+													fill="none"
+													stroke="currentColor"
+													stroke-linecap="round"
+													stroke-miterlimit="10"
+													stroke-width="32"
+													d="m250.5 140.44l-16.51-16.51m60.53 60.53l-11.01-11m55.03 55.03l-11-11.01m60.53 60.53l-16.51-16.51" />
+											</svg>
+											<span>Conference Ticker</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- each footer link container @e-->
+							<!-- each footer link container @s -->
+							<div class="each_container">
+								<h6 class="link_title">Get in touch</h6>
+								<ul class="links_container">
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Contact Us</a></li>
+									<li><a href="#">FAQs</a></li>
+								</ul>
+							</div>
+							<!-- each footer link container @e-->
+						</div>
+						<div class="external_links_wrapper">
+							<div class="links_container align-items-start align-items-md-center">
+								<div class="text-center"><h6 class="link_title">Get the CryptoCompare App</h6></div>
+								<div class="store_logos">
+									<a href="">
+										<img src="./assets/images/playstore.png" alt="" class="img-fluid" />
+									</a>
+									<a href="">
+										<img src="./assets/images/appstore.png" alt="" class="img-fluid" />
+									</a>
+								</div>
+								<div class="social_logos">
+									<div class="social_logos_inner">
+										<a href="">
+											<div class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+													<path
+														fill="currentColor"
+														d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101a4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732a11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9c0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
+												</svg>
+											</div>
+										</a>
+										<a href="">
+											<div class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+													<path
+														fill="currentColor"
+														d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73Z" />
+												</svg>
+											</div>
+										</a>
+										<a href="">
+											<div class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+													<path
+														fill="currentColor"
+														d="M21.21 6.417H22V4.083h-7.48l-2.486 9.167h-.068L9.503 4.083H2v2.334h.768a.896.896 0 0 1 .732.694v9.83a.84.84 0 0 1-.732.642H2v2.334h6v-2.334H6.5V7.25h.088l3.457 12.667h2.712L16.26 7.25h.073v10.333h-1.5v2.334H22v-2.334h-.791a.84.84 0 0 1-.709-.641v-9.83a.898.898 0 0 1 .71-.695Z" />
+												</svg>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="_zof28fojwef align-items-start align-items-md-center">
+									<span> &#169; 2019 - 2023 Crypto Coin Comparison Ltd</span>
+									<a href="">
+										Made with love
+										<svg class="love" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 128 128">
+											<path
+												fill="#db4437"
+												d="M96.67 15.85h-.2c-.49 0-.99 0-1.48.02c-5.18.09-10.21 1.24-14.96 3.23c-5.09 2.15-8.58 5.35-13.11 8.23c-.85.54-1.89.81-2.92.81c-1.04 0-2.08-.27-2.93-.81c-4.52-2.88-8.02-6.08-13.11-8.23c-4.75-1.99-9.78-3.14-14.96-3.23c-.49-.02-.98-.02-1.47-.02h-.2c-13.12 0-22.69 7.54-28.3 20.65C.63 42.08.59 50.48 1.57 56.34c.98 5.84 3.41 11.11 6.72 16.03C19.32 88.8 39 96.42 53.19 109.66c1.51 1.41 3.01 2.94 4.55 4.35c1.64 1.51 3.62 4.99 6.26 5.15c2.63-.16 4.62-3.63 6.26-5.15c1.54-1.42 3.03-2.94 4.55-4.35C89 96.42 108.67 88.8 119.7 72.38c3.31-4.92 5.74-10.19 6.72-16.03c.98-5.86.94-14.27-1.46-19.84c-5.61-13.12-15.17-20.66-28.29-20.66z" />
+										</svg>
+										in Nigeria
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- footer @e -->
+		</div>
+	</body>
+	<script src="./assets/js/bootstrap.min.js"></script>
+</html>

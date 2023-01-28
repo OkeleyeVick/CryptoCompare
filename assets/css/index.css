@@ -1,0 +1,460 @@
+@font-face {
+	font-family: SpaceGrotesk;
+	src: url("../font/SpaceGrotesk.ttf");
+}
+/* variables @s */
+:root {
+	--font-family: SpaceGrotesk;
+	--green-opacity: rgb(191 238 202 / 65%);
+	--green-light: #0e8847;
+	--green-lighter: #12a733;
+	--grey_1: #aaaaad;
+	--font-clr: #444546;
+	--text-clr: #666;
+	--black: #000;
+	--white: #fff;
+	--footer_bg: #131417;
+	--ref-bg: #f6f6f6;
+	--grey_2: #b6b6b8;
+	--transition: 280ms ease-in-out;
+	--border: 1.5px solid #b6b6b847;
+	--border-clr: #b6b6b847;
+}
+/* variables @e */
+
+/* defaults @s */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family);
+}
+:is(h1, h2, h3, h4, h5, h6) {
+	font-weight: 600;
+	margin: 0;
+}
+:is(li, ul) {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	font-size: 14px;
+}
+:is(.btn, button):focus {
+	box-shadow: none;
+	outline: none;
+}
+/* defaults @e */
+
+.body_inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+/* nav bars @s */
+/* ========== large nav bars @s ========= */
+/* ============ large nav bars @e ========== */
+/* ============ mobile nav bars @s ========== */
+/* ============ mobile nav bars @e ========== */
+/* nav bars @e */
+
+/* main sections @s */
+main section {
+	padding: 3rem 0 4rem;
+}
+
+/* section one @s */
+main section.coins_table ul.nav-tabs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+main section.coins_table ul.nav-tabs .nav-link {
+	width: 100%;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: var(--font-clr);
+	font-size: 0.9rem;
+	letter-spacing: 0.2px;
+	padding: 0.8rem 0;
+}
+main section.coins_table ul.nav-tabs .nav-link:not(.active) {
+	border-top: 3px solid transparent;
+}
+main section.coins_table ul.nav-tabs .nav-link.active {
+	border-top: 5px solid var(--green-lighter);
+	border-right: var(--border);
+	border-left: var(--border);
+}
+main section.coins_table .nav-item {
+	display: flex;
+}
+main section.coins_table .nav-link.active {
+	border-top-color: var(--green-lighter);
+}
+main section.coins_table :is(.nav-item:has(.nav-link.active) + .nav-item .nav-link, .nav-item:has(+ .nav-item .nav-link.active) .nav-link),
+main section.coins_table .nav-link:not(.active):hover {
+	border: none;
+}
+
+:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
+	border-right: var(--border);
+	border-left: var(--border);
+}
+.crypto_lists_table_body {
+	border-bottom: var(--border);
+}
+.crypto_lists_table_header {
+	padding: 0.3rem 0;
+	border-bottom: 1.5px solid var(--green-lighter);
+}
+.crypto_lists_table_header > span {
+	font-weight: 900;
+	border-radius: 2px;
+	font-size: 0.75rem;
+}
+.crypto_lists_table_body .each-coin > span {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+.crypto_lists_table_body .each-coin > span.num {
+	font-weight: 900;
+}
+* span:has(svg) svg {
+	color: var(--grey_1);
+}
+.crypto_lists_table_body .each-coin > span.date_time {
+	display: grid;
+	place-content: center;
+	color: var(--text-clr);
+}
+.crypto_lists_table_body .each-coin > span:not(:last-child) {
+	border-right: 1px solid var(--border-clr);
+}
+:is(.crypto_lists_table_header) > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) > span {
+	white-space: nowrap;
+	text-align: center;
+	padding: 5px;
+	-webkit-transition: background-color var(--transition);
+	-moz-transition: background-color var(--transition);
+	-ms-transition: background-color var(--transition);
+	-o-transition: background-color var(--transition);
+	transition: background-color var(--transition);
+}
+:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) > :is(span.has-to-md-hidden, span.has-to-sm-hidden) {
+	display: none;
+}
+@media all and (min-width: 630px) {
+	:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) > span.has-to-sm-hidden {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) {
+		grid-template-columns: 0.4fr 2fr 1fr 0.8fr 0.8fr 1.2fr 1fr;
+	}
+}
+@media all and (min-width: 1020px) {
+	:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) > span.has-to-md-hidden {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	:is(.crypto_lists_table_header, .crypto_lists_table_body .each-coin) {
+		grid-template-columns: 0.4fr 1fr 1fr 0.8fr 0.8fr 0.8fr 1fr 0.4fr 1.5fr 0.6fr;
+	}
+}
+.crypto_lists_table_header > span:hover {
+	background-color: var(--green-opacity);
+}
+.crypto_lists_table_header > span.has-icon {
+	gap: 5px;
+}
+.crypto_lists_table_body .each-coin:not(:last-child) {
+	border-bottom: 1px solid var(--border-clr);
+}
+.crypto_lists_table_body .each-coin .coin a {
+	display: grid;
+	grid-template-columns: 0.4fr 1fr;
+	gap: 0.7rem;
+}
+.crypto_lists_table_body .each-coin .coin_image {
+	display: none;
+}
+.crypto_lists_table_body .each-coin .coin_image img {
+	max-width: 35px;
+}
+@media all and (min-width: 375px) {
+	.crypto_lists_table_body .each-coin .coin_image {
+		display: inline-block;
+	}
+}
+.crypto_lists_table_body .each-coin .coin_names {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.crypto_lists_table_body .each-coin .coin_names span {
+	line-height: 1.2;
+	font-weight: 900;
+}
+.crypto_lists_table_body .each-coin .coin_names .coin_fullname {
+	font-size: 0.9rem;
+	color: var(--black);
+}
+.crypto_lists_table_body .each-coin .coin_names .coin_short {
+	font-size: 0.76rem;
+	color: var(--text-clr);
+	text-transform: uppercase;
+}
+@media all and (max-width: 400px) {
+	html {
+		font-size: 14px;
+	}
+}
+/* section one @e */
+
+/* section two @s */
+
+main section.guides .section_title .title {
+	font-weight: 900;
+	padding-bottom: 1rem;
+	width: max-content;
+	margin-inline: auto;
+	position: relative;
+	text-transform: uppercase;
+}
+main section.guides .section_title .title::before {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	height: 1.5px;
+	width: 200px;
+	content: "";
+}
+main section.guides .section_title {
+	margin-bottom: 1rem;
+}
+main section.guides .section_subcontent span {
+	font-size: 0.95rem;
+}
+main section.guides .brand {
+	font-weight: 900;
+	color: var(--green-lighter);
+}
+.crypto_news_wrapper_inner {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+	padding-top: 3rem;
+}
+@media all and (min-width: 400px) {
+	.crypto_news_wrapper_inner {
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	}
+}
+.crypto_news_wrapper_inner .each_news {
+	padding: 1.5rem;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: 6px;
+	border: 1px solid #eaeaee;
+}
+.crypto_news_wrapper_inner .each_news .sponsor {
+	margin-bottom: 0.7rem;
+	line-height: 1;
+}
+.crypto_news_wrapper_inner .each_news .sponsor small {
+	font-size: 0.8rem;
+	font-weight: 900;
+}
+.crypto_news_wrapper_inner .each_news .image-container {
+	border-radius: 6px;
+	overflow: hidden;
+}
+.crypto_news_wrapper_inner .each_news_content {
+	display: grid;
+	grid-template-columns: 0.35fr 1fr;
+	gap: 1.2rem;
+}
+.crypto_news_wrapper_inner .text-content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+}
+
+.crypto_news_wrapper_inner .text-content-title .title {
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	color: var(--black);
+}
+.crypto_news_wrapper_inner .text-content-body span {
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	font-size: 0.9rem;
+	color: var(--font-clr);
+}
+.crypto_news_wrapper_inner :is(.text-link a, .text-content-body span) {
+	line-height: 1.4;
+	display: none;
+}
+@media all and (min-width: 375px) {
+	.crypto_news_wrapper_inner :is(.text-link a, .text-content-body span) {
+		display: none;
+	}
+}
+.crypto_news_wrapper_inner .text-link a {
+	display: none;
+	font-size: 0.8rem;
+	color: var(--black);
+}
+@media all and(min-width: 376px) {
+	.crypto_news_wrapper_inner :is(.text-link a, .text-content-body span) {
+		display: inline;
+	}
+}
+/* section two @end */
+
+/* main sections @e */
+
+/* footer @s */
+footer .footer_inner {
+	background-color: var(--footer_bg);
+	padding: 4rem 0 3rem;
+}
+.grid_wrapper_main {
+	display: grid;
+	grid-template-columns: 1fr 0.5fr;
+	gap: 3rem 2.2rem;
+}
+@media all and (max-width: 769px) {
+	.grid_wrapper_main {
+		grid-template-columns: 1fr;
+	}
+}
+footer .internal_links_wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	grid-gap: 2rem;
+}
+.internal_links_wrapper :is(.each_container, .links_container) {
+	display: flex;
+	flex-direction: column;
+}
+.internal_links_wrapper .each_container {
+	row-gap: 1rem;
+}
+.internal_links_wrapper .links_container {
+	row-gap: 0.1rem;
+}
+.internal_links_wrapper .links_container a {
+	color: var(--white);
+	font-size: 0.8rem;
+	padding: 0.3rem 0;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+}
+.internal_links_wrapper .links_container a:hover {
+	color: var(--green-lighter);
+}
+.internal_links_wrapper > div:not(.has-icons) li {
+	padding: 0.2rem 0;
+}
+.internal_links_wrapper .has-icons li a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+:is(.external_links_wrapper, .internal_links_wrapper) .link_title {
+	color: var(--green-lighter);
+	font-size: 0.88rem;
+}
+.external_links_wrapper .links_container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+.external_links_wrapper :is(.links_container > div * a, ._zof28fojwef a) {
+	color: var(--white);
+}
+.external_links_wrapper ._zof28fojwef .love {
+	font-size: 1.2rem;
+	margin: -4px 3px 0;
+}
+.external_links_wrapper ._zof28fojwef a:hover {
+	text-decoration: 1.5px underline var(--green-lighter);
+}
+.external_links_wrapper .social_logos_inner {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+}
+.external_links_wrapper .social_logos_inner a div {
+	background-color: var(--black);
+	padding: 7px;
+	border-radius: 5px;
+	border: 1px solid var(--green-opacity);
+	-webkit-transition: border-color var(--transition);
+	-moz-transition: border-color var(--transition);
+	-ms-transition: border-color var(--transition);
+	-o-transition: border-color var(--transition);
+	transition: border-color var(--transition);
+}
+.external_links_wrapper .social_logos_inner a:hover div {
+	border-color: var(--green-light);
+}
+.external_links_wrapper .social_logos_inner a svg {
+	font-size: 1.4rem;
+}
+.external_links_wrapper ._zof28fojwef a {
+	font-size: 0.8rem;
+}
+.external_links_wrapper ._zof28fojwef {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+	align-items: center;
+	color: var(--white);
+}
+.external_links_wrapper ._zof28fojwef span {
+	font-size: 0.79rem;
+}
+.external_links_wrapper .store_logos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.external_links_wrapper .store_logos img {
+	width: 120px;
+}
+.external_links_wrapper .store_logos a {
+	border-radius: 8px;
+	overflow: hidden;
+	-webkit-transition: border-color var(--transition);
+	-moz-transition: border-color var(--transition);
+	-ms-transition: border-color var(--transition);
+	-o-transition: border-color var(--transition);
+	transition: border-color var(--transition);
+	border: 2px var(--green-lighter) solid;
+}
+.external_links_wrapper .store_logos a:hover {
+	border: 2px solid var(--green-light);
+}
+/* footer @e */ ;
