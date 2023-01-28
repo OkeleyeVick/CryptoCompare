@@ -12,10 +12,10 @@
 		<div class="body_inner">
 			<!-- header @s -->
 			<header>
-				<div class="header_inner">
-					<div class="row col-12 m-0 align-items-center">
-						<div class="col-md-7 p-0">
-							<div class="d-flex align-items-center">
+				<div class="header_inner container-md">
+					<div class="row col-12 m-0 align-items-center justify-content-between d-none d-md-flex">
+						<div class="col-md-5 p-0">
+							<div class="d-flex align-items-center logo_links">
 								<div class="image-container">
 									<img src="./assets/images/Cardify Logo Variant.png" alt="" class="img-fluid" />
 								</div>
@@ -28,7 +28,7 @@
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="portfolio_sign_in_up d-flex align-items-center">
+							<div class="portfolio_sign_in_up d-flex align-items-center justify-content-end">
 								<a href=""> Portfolio </a>
 								<!-- Button trigger modal -->
 								<button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -41,7 +41,7 @@
 
 				<!-- Modal @s-->
 				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
+					<div class="modal-dialog modal-dialog-centered">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
@@ -58,8 +58,77 @@
 				<!-- Modal @e -->
 			</header>
 			<div class="sub-header">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum voluptas quam inventore explicabo perspiciatis, aspernatur quasi
-				optio. Quia nihil consectetur asperiores, cum temporibus commodi. Id magnam tempore distinctio vitae quod?
+				<div class="sub-header_inner container-md p-0">
+					<div class="col-md-10 col-md-10 mx-auto">
+						<button class="mobile_menu d-lg-none" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+								<path fill="currentColor" d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z" />
+							</svg>
+							<div></div>
+						</button>
+						<div class="sub_links">
+							<a href="">Coin List</a>
+							<a href="">
+								<span class="has-icon">
+									<span>Top List</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+										<path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="48"
+											d="m112 184l144 144l144-144" />
+									</svg>
+								</span>
+								<div></div>
+							</a>
+							<a href="">
+								<span class="has-icon">
+									<span>Research</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+										<path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="48"
+											d="m112 184l144 144l144-144" />
+									</svg>
+								</span>
+								<div></div>
+							</a>
+							<a href=""> News </a>
+						</div>
+						<div class="form_container">
+							<form action="">
+								<div class="form-input">
+									<input type="serach" class="form-control" />
+								</div>
+								<div class="search_button">
+									<button type="button">
+										<span>Search</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+											<path
+												fill="none"
+												stroke="currentColor"
+												stroke-miterlimit="10"
+												stroke-width="32"
+												d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" />
+											<path
+												fill="none"
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-miterlimit="10"
+												stroke-width="32"
+												d="M338.29 338.29L448 448" />
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- header @e -->
 			<main>
