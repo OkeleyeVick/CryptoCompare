@@ -17,6 +17,7 @@ dropdownLinks.forEach((link) => {
 
 		const check = this.parentElement.previousElementSibling.classList.contains("position-relative");
 
+		console.log(check);
 		//check is and must equal true
 		if (check) {
 		}
