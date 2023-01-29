@@ -103,17 +103,35 @@ header + .sub-header {
 	background-color: var(--footer_bg);
 	/* background-color: var(--header-bg); */
 	/* background-color: var(--green-lighter); */
-	padding: 0.7rem 0;
+	padding: 0.4rem 0;
 	z-index: 99;
 }
 .sub-header_inner .sub_links {
 	display: flex;
 	align-items: center;
-	gap: 2.5rem;
+	gap: 5px;
 }
-.sub-header_inner .sub_links :is(a *, a) {
-	color: var(--white);
+.sub-header_inner div.sub_links li > :is(button, a) {
+	border: none;
 	font-weight: 600;
+	color: var(--white);
+	background-color: transparent;
+	font-size: 0.9rem;
+	padding: 12px;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+}
+.sub-header_inner .sub_links li button svg {
+	margin-top: -3px;
+}
+.sub-header_inner .sub_links .sub_link_item.active {
+	color: var(--green-light);
+}
+.sub-header_inner .sub_links li :is(button, a, button svg):hover {
+	color: var(--green-lighter);
 }
 .sub-header form {
 	gap: 10px;
@@ -125,6 +143,10 @@ header + .sub-header {
 	color: var(--white);
 	width: 100%;
 	min-height: 2.8rem;
+	font-size: 0.8rem;
+}
+.sub-header .form-control::placeholder {
+	font-size: 0.85rem;
 }
 .sub-header .form-control:focus {
 	box-shadow: none;
@@ -151,6 +173,95 @@ header + .sub-header {
 }
 .form_container .form-input {
 	width: 60%;
+}
+.sub_links :is(.top_lists, .research) .drop_down {
+	background-color: var(--white);
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	left: -5rem;
+	top: 1.6rem;
+	min-width: 700px;
+	width: 100%;
+	z-index: 90;
+}
+.sub_links :is(.research, .top_lists) .drop_down {
+	/* display: grid; */
+	grid-template-columns: 1fr 1fr 1.5fr;
+}
+.sub_links .research .drop_down {
+	display: grid;
+	/* display: none; */
+}
+.sub_links .top_lists .drop_down {
+	/* display: grid; */
+	display: none;
+}
+.sub_links :is(.top_lists, .research) .drop_down .column_two {
+	flex-grow: 0.8;
+}
+.sub_links :is(.top_lists, .research) .drop_down .column_three {
+	flex-grow: 2;
+	width: auto;
+}
+.sub_links .drop_down .column {
+	padding: 0.7rem 0.6rem 1rem;
+}
+.sub_links .drop_down .column_inner {
+	display: flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+	row-gap: 1rem;
+}
+.sub_links :is(.top_lists, .research) .column-title .title {
+	color: var(--white);
+	text-transform: uppercase;
+	font-size: 0.78rem;
+	letter-spacing: 0.3px;
+	background-color: var(--green-lighter);
+	padding: 10px;
+	border-radius: 6px;
+}
+.sub_links :is(.top_lists, .research) .drop_down .column:nth-child(2n) {
+	border-right: var(--border);
+	border-left: var(--border);
+}
+.sub_links :is(.top_lists, .research) .links_wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.sub_links :is(.top_lists, .research) .links_wrapper a {
+	font-size: 0.8rem;
+	color: var(--text-clr);
+	padding: 10px 8px;
+	border-radius: 5px;
+	display: block;
+	-webkit-line-clamp: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.sub_links :is(.top_lists, .research) .links_wrapper a:hover {
+	background-color: var(--green-opacity);
+}
+.sub_links :is(.top_lists, .research) .coins_grid_wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+	gap: 1.1rem 5px;
+}
+.sub_links :is(.top_lists, .research) .coins_grid_wrapper a {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	color: var(--footer_bg);
+	font-weight: 900;
+	justify-content: center;
+	font-size: 0.78rem;
+	align-items: center;
+	text-align: center;
+}
+.sub_links :is(.top_lists, .research) .coins_grid_wrapper li img {
+	max-width: 30px;
 }
 /* ============ large nav bars @e ========== */
 /* ============ mobile nav bars @s ========== */

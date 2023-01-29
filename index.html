@@ -67,35 +67,184 @@
 							<div></div>
 						</button>
 						<div class="sub_links d-none d-lg-flex">
-							<a href="">Coin List</a>
-							<a role="button">
-								<span class="has-icon">
+							<li>
+								<a href="" class="sub_link_item">Coin List</a>
+							</li>
+							<li class="position-relative top_lists">
+								<button class="has-icon sub_link_item">
 									<span>Top List</span>
 									<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
 										<path
 											fill="currentColor"
 											d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7L86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
 									</svg>
-								</span>
-								<div></div>
-							</a>
-							<a role="button">
-								<span class="has-icon">
+								</button>
+								<!-- dropdown @s-->
+								<div class="position-absolute top_lists_dropdown drop_down">
+									<div class="column column_one">
+										<div class="column_inner">
+											<div class="column-title">
+												<h6 class="title">trading / mining</h6>
+											</div>
+											<ul class="links_wrapper">
+												<li><a href="#">Coins</a></li>
+												<li><a href="#">Defi</a></li>
+												<li><a href="#">Token Sales (ICOs, STOs, etc.)</a></li>
+												<li><a href="#">Exchanges</a></li>
+												<li><a href="#">Mining</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="column column_two">
+										<div class="column_inner">
+											<div class="column-title">
+												<h6 class="title">others</h6>
+											</div>
+											<ul class="links_wrapper">
+												<li><a href="#">Wallets</a></li>
+												<li><a href="#">Cards</a></li>
+												<li><a href="#">Latest Posts</a></li>
+												<li><a href="#">Public Portfolios</a></li>
+												<li><a href="#">Mining Calculator</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="column column_three">
+										<div class="column_inner">
+											<div class="column-title">
+												<h6 class="title">popular coins</h6>
+											</div>
+											<ul class="coins_grid_wrapper">
+												<li>
+													<a href="#">
+														<img src="./assets/images/btc.png" alt="" class="img-fluid" />
+														<small class="coin_name">Bitcoin</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/eth.png" alt="" class="img-fluid" />
+														<small class="coin_name">Ethereum</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/avax.png" alt="" class="img-fluid" />
+														<small class="coin_name">Avax</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/gala.png" alt="" class="img-fluid" />
+														<small class="coin_name">Gala</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/apt.png" alt="" class="img-fluid" />
+														<small class="coin_name">Apt</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/busd.png" alt="" class="img-fluid" />
+														<small class="coin_name">Busd</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/matic.png" alt="" class="img-fluid" />
+														<small class="coin_name">Matic</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/xrp.png" alt="" class="img-fluid" />
+														<small class="coin_name">XRP</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/okx.png" alt="" class="img-fluid" />
+														<small class="coin_name">OKX</small>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="./assets/images/usdt.png" alt="" class="img-fluid" />
+														<small class="coin_name">USDT</small>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- dropdown @s-->
+							</li>
+							<li class="position-relative research">
+								<button class="has-icon sub_link_item active">
 									<span>Research</span>
 									<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
 										<path
 											fill="currentColor"
 											d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7L86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
 									</svg>
-								</span>
-								<div></div>
-							</a>
-							<a href=""> News </a>
+								</button>
+								<div class="position-absolute research_dropdown drop_down">
+									<!-- dropdown @s-->
+									<div class="position-absolute top_lists_dropdown drop_down">
+										<div class="column column_one">
+											<div class="column_inner">
+												<div class="column-title">
+													<h6 class="title">Reports</h6>
+												</div>
+												<ul class="links_wrapper">
+													<li><a href="#">Exchange Review</a></li>
+													<li><a href="#">Exchange Benchmark</a></li>
+													<li><a href="#">Other Research</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="column column_two">
+											<div class="column_inner">
+												<div class="column-title">
+													<h6 class="title">guides</h6>
+												</div>
+												<ul class="links_wrapper">
+													<li><a href="#">Coin</a></li>
+													<li><a href="#">Exchanges</a></li>
+													<li><a href="#">Mining</a></li>
+													<li><a href="#">Wallets</a></li>
+													<li><a href="#">Gambling</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="column column_three">
+											<div class="column_inner">
+												<div class="column-title">
+													<h6 class="title">Latest guides</h6>
+												</div>
+												<ul class="links_wrapper">
+													<li><a href="#">What Types of Crypto Derivatives Are There?</a></li>
+													<li><a href="#">4 Different Ways Bitcoin is Being Used Nowadays</a></li>
+													<li><a href="#">How to Copy Trade Cryptocurrencies - eToro Guide</a></li>
+													<li><a href="#">How to use our API</a></li>
+													<li><a href="#">How to Build a Cryptocurrency Portfolio</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- dropdown @s-->
+								</div>
+							</li>
+							<li>
+								<a href="" class="sub_link_item"> News </a>
+							</li>
 						</div>
 						<div class="form_container">
 							<form action class="d-flex align-items-center justify-content-end">
 								<div class="form-input">
-									<input type="search" class="form-control" />
+									<input type="text" class="form-control" placeholder="Enter search" />
 								</div>
 								<div class="search_button">
 									<button type="button">
