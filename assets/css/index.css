@@ -109,7 +109,7 @@ header .portfolio_sign_in_up button:hover {
 }
 header + .sub-header {
 	position: sticky;
-	top: 0;
+	top: 4rem;
 	background-color: var(--footer_bg);
 	/* background-color: var(--header-bg); */
 	/* background-color: var(--green-lighter); */
