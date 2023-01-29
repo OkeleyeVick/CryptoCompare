@@ -49,6 +49,13 @@ a {
 	box-shadow: none;
 	outline: none;
 }
+* :is(button, a) {
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+}
 /* defaults @e */
 
 .body_inner {
@@ -96,6 +103,9 @@ header .portfolio_sign_in_up button {
 	padding: 1rem 1rem;
 	border: none;
 	background-color: var(--green-lighter);
+}
+header .portfolio_sign_in_up button:hover {
+	background-color: var(--green-light);
 }
 header + .sub-header {
 	position: sticky;
@@ -165,6 +175,9 @@ header + .sub-header {
 	justify-content: center;
 	gap: 5px;
 }
+.sub-header .search_button button:hover {
+	background-color: var(--green-light);
+}
 .sub-header .search_button button svg {
 	font-size: 1.05rem;
 }
@@ -189,8 +202,8 @@ header + .sub-header {
 	grid-template-columns: 1fr 1fr 1.5fr;
 }
 .sub_links .research .drop_down {
-	display: grid;
-	/* display: none; */
+	/* display: grid; */
+	display: none;
 }
 .sub_links .top_lists .drop_down {
 	/* display: grid; */
@@ -281,10 +294,68 @@ header + .sub-header {
 	background-color: transparent;
 	color: var(--white);
 }
-.sub-header button.mobile_menu svg {
+.sub-header button.mobile_menu > svg {
 	font-size: 1.7rem;
 }
-
+.mobile_menu_container_inner .nav_item {
+	padding: 0.6rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 4px;
+	color: var(--white);
+	border-radius: 8px;
+}
+.mobile_menu_container_inner .nav_item:hover {
+	background-color: var(--green-light);
+	color: var(--white);
+}
+.mobile_menu_container {
+	background-color: var(--footer_bg);
+	padding: 1rem;
+	border-radius: 12px;
+	width: 350px;
+	/* opacity: 0;
+	scale: 0;
+	visibility: hidden; */
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+	transform-origin: top left;
+	/* aspect-ratio: 1 /1; */
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mobile_menu:hover .mobile_menu_container {
+	scale: 1;
+	opacity: 1;
+	visibility: visible;
+}
+:is(.mobile_menu_header, .mobile_menu_body_inner) {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+.mobile_menu_body_inner .nav_item svg {
+	font-size: 1.5rem;
+}
+.mobile_menu_body_inner .nav_item span {
+	font-size: 0.78rem;
+	white-space: nowrap;
+}
+.mobile_menu_container_inner {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+@media all and (min-width: 375px) {
+	.mobile_menu_container {
+		width: min-content;
+	}
+	.mobile_menu_container_inner .nav_item {
+		padding: 1rem;
+	}
+}
 /* ============ mobile nav bars @e ========== */
 /* nav bars @e */
 
