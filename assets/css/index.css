@@ -191,24 +191,34 @@ header + .sub-header {
 	background-color: var(--white);
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	left: -5rem;
-	top: 1.6rem;
+	left: 0;
+	top: 3rem;
 	min-width: 700px;
 	width: 100%;
 	z-index: 90;
 }
 .sub_links :is(.research, .top_lists) .drop_down {
-	/* display: grid; */
+	display: grid;
 	grid-template-columns: 1fr 1fr 1.5fr;
+	scale: 0;
+	visibility: hidden;
+	opacity: 0.4;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+	transform-origin: top left;
 }
-.sub_links .research .drop_down {
-	/* display: grid; */
+.sub_links :is(.research, .top_lists) .drop_down.active {
+	scale: 1;
+	visibility: visible;
+	opacity: 1;
+}
+/* .sub_links .top_lists .drop_down {
+	display: grid;
 	display: none;
-}
-.sub_links .top_lists .drop_down {
-	/* display: grid; */
-	display: none;
-}
+} */
 .sub_links :is(.top_lists, .research) .drop_down .column_two {
 	flex-grow: 0.8;
 }
