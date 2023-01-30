@@ -63,6 +63,7 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 /* nav bars @s */
@@ -111,8 +112,6 @@ header + .sub-header {
 	position: sticky;
 	top: 0;
 	background-color: var(--footer_bg);
-	/* background-color: var(--header-bg); */
-	/* background-color: var(--green-lighter); */
 	padding: 0.4rem 0;
 	z-index: 99;
 }
@@ -215,10 +214,6 @@ header + .sub-header {
 	visibility: visible;
 	opacity: 1;
 }
-/* .sub_links .top_lists .drop_down {
-	display: grid;
-	display: none;
-} */
 .sub_links :is(.top_lists, .research) .drop_down .column_two {
 	flex-grow: 0.8;
 }
@@ -339,7 +334,6 @@ header .modal {
 	-o-transition: var(--transition);
 	transition: var(--transition);
 	transform-origin: top left;
-	/* aspect-ratio: 1 /1; */
 	box-shadow: rgba(255 255 255 / 50%) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .mobile_menu + .mobile_menu_container.active {
@@ -488,7 +482,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	background-color: var(--green-lighter);
 }
 .crypto_lists_table_header {
-	padding: 0.3rem 0;
+	padding: 0.3rem;
 	border-bottom: 1.5px solid var(--green-lighter);
 }
 .crypto_lists_table_header > span {
