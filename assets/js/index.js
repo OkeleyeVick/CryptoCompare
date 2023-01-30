@@ -9,21 +9,9 @@ function toggleMobileMenu(e) {
 	e.preventDefault();
 	mobileMenu.classList.toggle("active");
 }
-
 dropdownLinks.forEach((link) => {
 	link.addEventListener("click", function (e) {
 		e.preventDefault();
 		this.nextElementSibling.classList.toggle("active");
-
-		const check = this.parentElement.previousElementSibling.classList.contains("position-relative");
-
-		console.log(check);
-		//check is and must equal true
-		if (check) {
-		}
-		// const siblingDropdown = previousSilbing.querySelector(".drop_down");
-		// siblingDropdown.classList.contains("active")
-		// 	? console.log("My sibling has an active child of dropdown")
-		// 	: console.log("Naaaaaa, I can be active");
 	});
 });
