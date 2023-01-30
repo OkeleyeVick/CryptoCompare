@@ -63,7 +63,7 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 100vh;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 /* nav bars @s */
@@ -373,6 +373,10 @@ header .modal {
 /* nav bars @e */
 
 /* main sections @s */
+
+main {
+	overflow-x: hidden;
+}
 main section {
 	padding: 3rem 0 4rem;
 }
@@ -608,7 +612,7 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 @media all and (max-width: 400px) {
 	html {
-		font-size: 14px;
+		font-size: 15px;
 	}
 }
 /* section one @e */
