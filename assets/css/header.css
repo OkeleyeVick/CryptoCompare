@@ -371,5 +371,9 @@ header .modal {
 		padding: 1rem;
 	}
 }
+.modal_body_inner .nav-pills {
+	justify-content: center;
+	gap: 0.8rem;
+}
 /* ============ mobile nav bars @e ========== */
 /* nav bars @e */

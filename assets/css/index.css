@@ -6,7 +6,9 @@ main {
 main section {
 	padding: 3rem 0 4rem;
 }
-
+main .main_inner {
+	padding: 0 0.5rem;
+}
 /* section one @s */
 main section.coins_table ul.nav-tabs {
 	display: grid;
