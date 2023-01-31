@@ -9,6 +9,8 @@ mobileMenuButton.addEventListener("click", toggleMobileMenu);
 forum_option_buttons.forEach((button) => {
 	button.addEventListener("click", function (e) {
 		e.stopPropagation();
+		const dropdown = this.nextElementSibling;
+		dropdown.classList.toggle("clicked");
 	});
 });
 
