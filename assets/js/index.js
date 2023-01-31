@@ -2,9 +2,15 @@ const mobileMenuButton = document.querySelector(".sub-header_inner .mobile_menu"
 const mobileMenu = document.querySelector(".mobile_menu_container");
 const dropdownLinks = document.querySelectorAll(".sub-header .has-icon");
 const stickyHeader = document.querySelector(".sub-header");
+const forum_option_buttons = document.querySelectorAll(".forum_menu > button");
 
 // events
 mobileMenuButton.addEventListener("click", toggleMobileMenu);
+forum_option_buttons.forEach((button) => {
+	button.addEventListener("click", function (e) {
+		e.stopPropagation();
+	});
+});
 
 function toggleMobileMenu(e) {
 	e.preventDefault();

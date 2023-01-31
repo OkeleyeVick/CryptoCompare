@@ -615,6 +615,84 @@ main section.coins_table .nav-link:not(.active):hover {
 		font-size: 15px;
 	}
 }
+
+/* forum tab */
+.forum_post_inner {
+	padding: 1.05rem;
+}
+.user_in_coin_forum {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.user_in_coin_forum .user_image img {
+	max-width: 35px;
+	border-radius: 100vw;
+}
+.user_in_coin_forum :is(span a, span) {
+	font-size: 0.78rem;
+}
+.user_in_coin_forum span a {
+	font-weight: 900;
+	color: var(--green-lighter);
+}
+.forum_menu button {
+	border: none;
+	background-color: transparent;
+	color: var(--green-lighter);
+}
+.forum_menu .options_container {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	background-color: var(--white);
+	width: 200px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border-radius: 5px;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+	scale: 0;
+	transform-origin: top right;
+}
+.forum_menu button.clicked + .options_container {
+	scale: 1;
+}
+.forum_menu button svg {
+	font-size: 1.2rem;
+}
+.options_container .each_social {
+	border-bottom: 0.5px solid var(--border-clr);
+}
+.options_container .each_social a {
+	display: flex;
+	align-items: center;
+}
+.options_container .each_social a:hover {
+	background-color: var(--green-opacity);
+}
+.options_container .each_social a:hover :is(span, span.icon svg) {
+	color: var(--green-light);
+}
+.options_container .each_social a:hover {
+	background-color: var(--green-opacity);
+}
+.options_container .each_social a span {
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 10px;
+}
+.options_container .each_social span:not(.icon) {
+	border-left: 0.5px solid var(--border-clr);
+	font-size: 0.76rem;
+	color: var(--font-clr);
+}
+.options_container .each_social span.icon svg {
+	font-size: 0.9001rem;
+}
+/* .options_container .each_social a spn */
 /* section one @e */
 
 /* section two @s */
@@ -684,7 +762,6 @@ main section.guides .brand {
 	row-gap: 0.5rem;
 	justify-content: center;
 }
-
 .crypto_news_wrapper_inner .text-content-title .title {
 	-webkit-line-clamp: 2;
 	line-clamp: 2;
