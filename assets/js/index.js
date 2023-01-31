@@ -10,15 +10,31 @@ function toggleMobileMenu(e) {
 	e.preventDefault();
 	mobileMenu.classList.toggle("active");
 }
-dropdownLinks.forEach((link) => {
+dropdownLinks.forEach((link, index) => {
 	link.addEventListener("click", function (e) {
 		e.preventDefault();
-		this.nextElementSibling.classList.toggle("active");
+		const nextItem = dropdownLinks[index - 1] ?? dropdownLinks[index + 1];
+		const nextItemSibling = nextItem.nextElementSibling;
+		if (this.classList.contains("has-icon") && nextItemSibling.classList.contains("active")) {
+			nextItemSibling.classList.remove("active");
+		}
+		const generalThis = this;
+		const activeDropdown = generalThis.nextElementSibling;
+		generalThis.nextElementSibling.classList.toggle("active");
+		const allLinksPerDropdowns = document.querySelectorAll(".sub-header .drop_down * a");
+
+		for (let linkItem of allLinksPerDropdowns) {
+			linkItem.addEventListener("click", function () {
+				if (activeDropdown.classList.contains("active")) {
+					activeDropdown.classList.remove("active");
+				}
+			});
+		}
 	});
 });
 
 // add instersect obersever
 
-const observer = new IntersectionObserver(stickyHeader);
+const observer = new IntersectionObserver(runObserver);
 
-console.log(observer);
+function runObserver() {}
