@@ -15,18 +15,15 @@ dropdownLinks.forEach((link, index) => {
 		e.preventDefault();
 		const nextItem = dropdownLinks[index - 1] ?? dropdownLinks[index + 1];
 		const nextItemSibling = nextItem.nextElementSibling;
-		if (this.classList.contains("has-icon") && nextItemSibling.classList.contains("active")) {
-			nextItemSibling.classList.remove("active");
-		}
+		this.classList.contains("has-icon") && nextItemSibling.classList.contains("active") ? nextItemSibling.classList.remove("active") : null;
+
 		const activeDropdown = this.nextElementSibling;
 		this.nextElementSibling.classList.toggle("active");
 		const allLinksPerDropdowns = document.querySelectorAll(".sub-header .drop_down * a");
 
 		for (let linkItem of allLinksPerDropdowns) {
 			linkItem.addEventListener("click", function () {
-				if (activeDropdown.classList.contains("active")) {
-					activeDropdown.classList.remove("active");
-				}
+				activeDropdown.classList.contains("active") ? activeDropdown.classList.remove("active") : null;
 			});
 		}
 	});

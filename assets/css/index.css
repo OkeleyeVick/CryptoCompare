@@ -682,6 +682,7 @@ main section.guides .brand {
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
+	justify-content: center;
 }
 
 .crypto_news_wrapper_inner .text-content-title .title {
@@ -699,19 +700,21 @@ main section.guides .brand {
 	line-height: 1.4;
 	display: none;
 }
-@media all and (min-width: 375px) {
-	.crypto_news_wrapper_inner :is(.text-link a, .text-content-body span) {
-		display: none;
-	}
-}
 .crypto_news_wrapper_inner .text-link a {
-	display: none;
 	font-size: 0.8rem;
 	color: var(--black);
 }
-@media all and(min-width: 376px) {
-	.crypto_news_wrapper_inner :is(.text-link a, .text-content-body span) {
-		display: inline;
+@media all and (min-width: 376px) {
+	.crypto_news_wrapper_inner .text-link a {
+		display: block;
+	}
+	.crypto_news_wrapper_inner .text-content-body span {
+		display: none;
+	}
+}
+@media all and (min-width: 600px) {
+	.crypto_news_wrapper_inner .text-content-body span {
+		display: block;
 	}
 }
 /* section two @end */
