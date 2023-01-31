@@ -18,9 +18,8 @@ dropdownLinks.forEach((link, index) => {
 		if (this.classList.contains("has-icon") && nextItemSibling.classList.contains("active")) {
 			nextItemSibling.classList.remove("active");
 		}
-		const generalThis = this;
-		const activeDropdown = generalThis.nextElementSibling;
-		generalThis.nextElementSibling.classList.toggle("active");
+		const activeDropdown = this.nextElementSibling;
+		this.nextElementSibling.classList.toggle("active");
 		const allLinksPerDropdowns = document.querySelectorAll(".sub-header .drop_down * a");
 
 		for (let linkItem of allLinksPerDropdowns) {

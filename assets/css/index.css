@@ -136,7 +136,7 @@ header + .sub-header {
 .sub-header_inner .sub_links li button svg {
 	margin-top: -3px;
 }
-.sub-header_inner .sub_links .sub_link_item.active {
+.sub-header_inner .sub_links .sub_link_item:has(+ .drop_down.active) {
 	color: var(--green-light);
 }
 .sub-header_inner .sub_links li :is(button, a, button svg):hover {
