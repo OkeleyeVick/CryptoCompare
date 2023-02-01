@@ -52,10 +52,13 @@
 					<div class="modal-dialog modal-dialog-centered">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
+								<div class="pre_form text-center">
+									<span>If you are enjoying our free Bitcoin (BTC) streaming service please login or signup.</span>
+								</div>
 								<div class="modal_body_inner">
 									<div class="social_logos"></div>
 									<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -72,7 +75,7 @@
 												Login
 											</button>
 										</li>
-										<li class="nav-item" role="presentation">
+										<li class="nav-item sign_up" role="presentation">
 											<button
 												class="nav-link"
 												id="pills-sign_up-tab"
@@ -89,26 +92,71 @@
 									<div class="tab-content" id="pills-tabContent">
 										<div
 											class="tab-pane fade show active"
-											id="pills-home"
+											id="pills-login"
 											role="tabpanel"
-											aria-labelledby="pills-home-tab"
+											aria-labelledby="pills-login-tab"
 											tabindex="0">
-											...
+											<!-- login form @s -->
+											<form action="" name="login_form">
+												<div class="form-input">
+													<label for="login_email" class="form-label">Email</label>
+													<input type="email" class="form-control" id="login_email" placeholder="Type in your email" />
+												</div>
+												<div class="form-input">
+													<label for="login_password" class="form-label">Password</label>
+													<input
+														type="password"
+														class="form-control"
+														id="login_password"
+														placeholder="Type in your password" />
+													<div class="forgot_password text-end">
+														<a href="">Forgot password</a>
+													</div>
+												</div>
+												<div class="submit_button">
+													<button type="submit">Login</button>
+												</div>
+											</form>
+											<!-- login form @e -->
 										</div>
 										<div
 											class="tab-pane fade"
-											id="pills-profile"
+											id="pills-sign_up"
 											role="tabpanel"
-											aria-labelledby="pills-profile-tab"
+											aria-labelledby="pills-sign_up-tab"
 											tabindex="0">
-											...
+											<!-- login form @s -->
+											<form action="" name="sign_up_form">
+												<div class="form-input">
+													<label for="sign_up_email" class="form-label">Email</label>
+													<input type="email" class="form-control" id="sign_up_email" placeholder="Type in your email" />
+												</div>
+												<div class="form-input">
+													<label for="sign_up_password" class="form-label">Password</label>
+													<input
+														type="password"
+														class="form-control"
+														id="sign_up_password"
+														placeholder="Type in your password" />
+												</div>
+												<div class="submit_button">
+													<button type="submit">Login</button>
+												</div>
+											</form>
+											<!-- login form @e -->
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save changes</button>
+							<div class="modal-footer text-center">
+								<div class="modal_footer_inner">
+									<span>
+										By registering for a free account on CryptoCompare.com, you agree and accept the
+										<a href="">Terms and Conditions</a>. You can control your email settings by editing your account and there is
+										an unsubscribe link on all the emails.
+									</span>
+									<span>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. </span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -796,8 +844,8 @@
 																	<a href="" class="coin_forum"> BTC Forum</a>
 																</span>
 															</div>
-															<div class="forum_menu pinned position-relative">
-																<button type="button">
+															<div class="forum_menu position-relative">
+																<button type="button" class="pinned">
 																	<svg
 																		xmlns="http://www.w3.org/2000/svg"
 																		width="1em"
@@ -838,6 +886,240 @@
 																					viewBox="0 0 24 24">
 																					<path
 																						fill="currentColor"
+																						d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101a4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732a11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9c0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
+																				</svg>
+																			</span>
+																			<span> Twitter </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 20 20">
+																					<path
+																						fill="currentColor"
+																						d="M1.989 5.589c0 1.494.499 2.572 1.482 3.205c.806.52 1.74.598 2.226.598c.118 0 .213-.006.279-.01c0 0-.154 1.004.59 1.996h-.034c-1.289 0-5.493.269-5.493 3.727c0 3.516 3.861 3.695 4.636 3.695c.061 0 .097-.002.097-.002c.008 0 .063.002.158.002c.497 0 1.782-.062 2.975-.643c1.548-.75 2.333-2.059 2.333-3.885c0-1.764-1.196-2.814-2.069-3.582c-.533-.469-.994-.873-.994-1.266c0-.4.337-.701.762-1.082c.689-.615 1.339-1.492 1.339-3.15c0-1.457-.189-2.436-1.354-3.057c.121-.062.551-.107.763-.137c.631-.086 1.554-.184 1.554-.699V1.2H6.64c-.046.002-4.651.172-4.651 4.389zm7.424 9.013c.088 1.406-1.115 2.443-2.922 2.574c-1.835.135-3.345-.691-3.433-2.096c-.043-.676.254-1.336.835-1.863c.589-.533 1.398-.863 2.278-.928c.104-.006.207-.012.31-.012c1.699.001 2.849.999 2.932 2.325zM8.212 4.626c.451 1.588-.23 3.246-1.316 3.553a1.417 1.417 0 0 1-.384.052c-.994 0-1.979-1.006-2.345-2.393c-.204-.776-.187-1.458.047-2.112c.229-.645.643-1.078 1.163-1.225c.125-.035.254-.053.385-.053c1.2 0 1.972.498 2.45 2.178zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8h-3z" />
+																				</svg>
+																			</span>
+																			<span> Share on G+ </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M6.4 20.4q-.5.2-.95-.088q-.45-.287-.45-.837V5q0-.825.588-1.413Q6.175 3 7 3h10q.825 0 1.413.587Q19 4.175 19 5v14.475q0 .55-.45.837q-.45.288-.95.088L12 18Z" />
+																				</svg>
+																			</span>
+																			<span> Link to Post</span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2" />
+																				</svg>
+																			</span>
+																			<span> Start Notifications </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 48 48">
+																					<mask id="ipSCaution0">
+																						<g fill="none" stroke-width="4">
+																							<path
+																								fill="#fff"
+																								fill-rule="evenodd"
+																								stroke="#fff"
+																								stroke-linejoin="round"
+																								d="M24 5L2 43h44L24 5Z"
+																								clip-rule="evenodd" />
+																							<path
+																								stroke="#000"
+																								stroke-linecap="round"
+																								d="M24 35v1m0-17l.008 10" />
+																						</g>
+																					</mask>
+																					<path
+																						fill="currentColor"
+																						d="M0 0h48v48H0z"
+																						mask="url(#ipSCaution0)" />
+																				</svg>
+																			</span>
+																			<span> Report (1) </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																</div>
+															</div>
+														</div>
+														<div class="user_in_coin_forum_body">
+															<span>
+																Dear CryptoCompare users,We are deeply grateful for the amazing support and loyalty
+																you have given us over the years. We understand that our growth has caused us to be
+																unable to provide the same level of attention to our forum as we would have liked, and
+																we are committed to improving our service to you.To ensure the best possible
+																experience for all of our users, we ask that you please help us by r …
+															</span>
+														</div>
+														<div class="forum_post_footer">
+															<div class="forum_post_footer_inner">
+																<div class="date_time">
+																	<svg
+																		xmlns="http://www.w3.org/2000/svg"
+																		width="1em"
+																		height="1em"
+																		viewBox="0 0 24 24">
+																		<g transform="rotate(-90 12 12)">
+																			<path
+																				fill="none"
+																				stroke="currentColor"
+																				stroke-linecap="round"
+																				stroke-linejoin="round"
+																				stroke-width="2"
+																				d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0m9 0l3-2m-3-3v5" />
+																		</g>
+																	</svg>
+																	<span> 14 days ago </span>
+																</div>
+																<div class="post_info">
+																	<span class="d-flex align-items-center">
+																		<span class="icon">
+																			<svg
+																				xmlns="http://www.w3.org/2000/svg"
+																				width="1em"
+																				height="1em"
+																				viewBox="0 0 24 24">
+																				<path
+																					fill="currentColor"
+																					d="M4 19.999a.999.999 0 0 1-1-1v-1a9.98 9.98 0 0 1 8-9.796V6.499c0-.534.208-1.036.585-1.414c.756-.757 2.075-.756 2.829-.001l6.288 6.203a.996.996 0 0 1 0 1.424l-6.293 6.207c-.746.746-2.067.751-2.823-.005A1.986 1.986 0 0 1 11 17.499v-1.437c-2.495.201-4.523.985-6.164 3.484a1 1 0 0 1-.836.453zm8-5.989l1-.01v3.499l5.576-5.5L13 6.503V10s-.384-.004-.891.052a7.982 7.982 0 0 0-6.892 6.08C7.338 14.404 9.768 14.066 12 14.01z" />
+																			</svg>
+																			<!-- <svg
+																				xmlns="http://www.w3.org/2000/svg"
+																				width="1.13em"
+																				height="1em"
+																				viewBox="0 0 1792 1600">
+																				<g transform="rotate(180 896 800) translate(0 1600) scale(1 -1)">
+																					<path
+																						fill="currentColor"
+																						d="M1792 576q0 26-19 45l-512 512q-19 19-45 19t-45-19t-19-45V832H928q-98 0-175.5 6t-154 21.5t-133 42.5T360 971.5t-80 101t-48.5 138.5t-17.5 181q0 55 5 123q0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17q-7-9-13-22t-13.5-30t-10.5-24Q0 1222 0 1056q0-199 53-333q162-403 875-403h224V64q0-26 19-45t45-19t45 19l512 512q19 19 19 45z" />
+																				</g>
+																			</svg> -->
+																		</span>
+																		<span class="text"> Replies </span>
+																		<span class="tag">
+																			<span class="value"> 205 </span>
+																		</span>
+																	</span>
+																	<span class="d-flex align-items-center">
+																		<span class="icon">
+																			<svg
+																				xmlns="http://www.w3.org/2000/svg"
+																				width="1em"
+																				height="1em"
+																				viewBox="0 0 24 24">
+																				<path
+																					fill="currentColor"
+																					d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z" />
+																			</svg>
+																		</span>
+																		<span class="text"> Agree </span>
+																		<span class="tag">
+																			<span class="value"> 205 </span>
+																		</span>
+																	</span>
+																	<span class="d-flex align-items-center">
+																		<span class="icon">
+																			<svg
+																				xmlns="http://www.w3.org/2000/svg"
+																				width="1em"
+																				height="1em"
+																				viewBox="0 0 24 24">
+																				<path
+																					fill="currentColor"
+																					d="M20 3H6.693A2.01 2.01 0 0 0 4.82 4.298l-2.757 7.351A1 1 0 0 0 2 12v2c0 1.103.897 2 2 2h5.612L8.49 19.367a2.004 2.004 0 0 0 .274 1.802c.376.52.982.831 1.624.831H12c.297 0 .578-.132.769-.36l4.7-5.64H20c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-8.469 17h-1.145l1.562-4.684A1 1 0 0 0 11 14H4v-1.819L6.693 5H16v9.638L11.531 20zM18 14V5h2l.001 9H18z" />
+																			</svg>
+																		</span>
+																		<span class="text"> Disagree </span>
+																		<span class="tag">
+																			<span class="value"> 205 </span>
+																		</span>
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- each forum post @e-->
+											<!-- each forum post @s -->
+											<div class="forum_post">
+												<div class="forum_post_inner">
+													<div class="user_in_coin_forum_container">
+														<div class="user_in_coin_forum_header d-flex align-items-center justify-content-between">
+															<div class="user_in_coin_forum">
+																<div class="user_image">
+																	<img src="./assets/images/company_1.png" alt="" class="img-fluid" />
+																</div>
+																<span>
+																	<a href="" class="username">Fevereiro</a>
+																	in
+																	<a href="" class="coin_forum"> BTC Forum</a>
+																</span>
+															</div>
+															<div class="forum_menu position-relative">
+																<button type="button">
+																	<svg
+																		xmlns="http://www.w3.org/2000/svg"
+																		width="1em"
+																		height="1em"
+																		viewBox="0 0 24 24">
+																		<path fill="currentColor" d="M10 10h4v4h-4zm0-6h4v4h-4zm0 12h4v4h-4z" />
+																	</svg>
+																</button>
+																<div class="options_container">
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
 																						d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
 																				</svg>
 																			</span>
@@ -856,10 +1138,98 @@
 																					viewBox="0 0 24 24">
 																					<path
 																						fill="currentColor"
-																						d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+																						d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101a4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732a11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9c0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
 																				</svg>
 																			</span>
-																			<span> Facebook </span>
+																			<span> Twitter </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 20 20">
+																					<path
+																						fill="currentColor"
+																						d="M1.989 5.589c0 1.494.499 2.572 1.482 3.205c.806.52 1.74.598 2.226.598c.118 0 .213-.006.279-.01c0 0-.154 1.004.59 1.996h-.034c-1.289 0-5.493.269-5.493 3.727c0 3.516 3.861 3.695 4.636 3.695c.061 0 .097-.002.097-.002c.008 0 .063.002.158.002c.497 0 1.782-.062 2.975-.643c1.548-.75 2.333-2.059 2.333-3.885c0-1.764-1.196-2.814-2.069-3.582c-.533-.469-.994-.873-.994-1.266c0-.4.337-.701.762-1.082c.689-.615 1.339-1.492 1.339-3.15c0-1.457-.189-2.436-1.354-3.057c.121-.062.551-.107.763-.137c.631-.086 1.554-.184 1.554-.699V1.2H6.64c-.046.002-4.651.172-4.651 4.389zm7.424 9.013c.088 1.406-1.115 2.443-2.922 2.574c-1.835.135-3.345-.691-3.433-2.096c-.043-.676.254-1.336.835-1.863c.589-.533 1.398-.863 2.278-.928c.104-.006.207-.012.31-.012c1.699.001 2.849.999 2.932 2.325zM8.212 4.626c.451 1.588-.23 3.246-1.316 3.553a1.417 1.417 0 0 1-.384.052c-.994 0-1.979-1.006-2.345-2.393c-.204-.776-.187-1.458.047-2.112c.229-.645.643-1.078 1.163-1.225c.125-.035.254-.053.385-.053c1.2 0 1.972.498 2.45 2.178zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8h-3z" />
+																				</svg>
+																			</span>
+																			<span> Share on G+ </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M6.4 20.4q-.5.2-.95-.088q-.45-.287-.45-.837V5q0-.825.588-1.413Q6.175 3 7 3h10q.825 0 1.413.587Q19 4.175 19 5v14.475q0 .55-.45.837q-.45.288-.95.088L12 18Z" />
+																				</svg>
+																			</span>
+																			<span> Link to Post</span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2" />
+																				</svg>
+																			</span>
+																			<span> Start Notifications </span>
+																		</a>
+																	</div>
+																	<!-- each social icon item @e -->
+																	<!-- each social icon item @s -->
+																	<div class="each_social">
+																		<a href="">
+																			<span class="icon">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 48 48">
+																					<mask id="ipSCaution0">
+																						<g fill="none" stroke-width="4">
+																							<path
+																								fill="#fff"
+																								fill-rule="evenodd"
+																								stroke="#fff"
+																								stroke-linejoin="round"
+																								d="M24 5L2 43h44L24 5Z"
+																								clip-rule="evenodd" />
+																							<path
+																								stroke="#000"
+																								stroke-linecap="round"
+																								d="M24 35v1m0-17l.008 10" />
+																						</g>
+																					</mask>
+																					<path
+																						fill="currentColor"
+																						d="M0 0h48v48H0z"
+																						mask="url(#ipSCaution0)" />
+																				</svg>
+																			</span>
+																			<span> Report (1) </span>
 																		</a>
 																	</div>
 																	<!-- each social icon item @e -->

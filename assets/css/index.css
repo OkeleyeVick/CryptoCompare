@@ -1,3 +1,24 @@
+/* variables @s */
+:root {
+	--font-family: SpaceGrotesk;
+	--green-opacity: rgb(191 238 202 / 65%);
+	--green-light: #0e8847;
+	--green-lighter: #12a733;
+	--grey_1: #aaaaad;
+	--font-clr: #444546;
+	--text-clr: #666;
+	--black: #000;
+	--white: #fff;
+	--footer_bg: #131417;
+	--ref-bg: #f6f6f6;
+	--grey_2: #b6b6b8;
+	--transition: 280ms ease-in-out;
+	--border: 1.5px solid #b6b6b847;
+	--border-clr: #b6b6b847;
+	--red: #c9302c;
+	--header-bg: rgb(10, 22, 35);
+}
+/* variables @e */
 /* main sections @s */
 
 main {
@@ -30,6 +51,7 @@ main section.coins_table ul.nav-tabs .nav-link.active {
 	border-top: 5px solid var(--green-lighter);
 	border-right: var(--border);
 	border-left: var(--border);
+	color: var(--green-lighter);
 }
 main section.coins_table .nav-item {
 	display: flex;
@@ -133,6 +155,7 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 * span:has(svg) svg {
 	color: var(--grey_1);
+	display: flex;
 }
 .crypto_lists_table_body .each-coin > span.date_time {
 	display: grid;
@@ -267,7 +290,25 @@ main section.coins_table .nav-link:not(.active):hover {
 .forum_menu button {
 	border: none;
 	background-color: transparent;
+}
+.forum_menu button.pinned svg {
 	color: var(--green-lighter);
+}
+.forum_menu button:not(.pinned) svg {
+	color: var(--grey_2);
+	font-size: 1.15rem;
+}
+.forum_menu button:not(.pinned) {
+	width: 2.5rem;
+	padding: 8px;
+	aspect-ratio: 1 /1;
+	border-radius: 50%;
+}
+.forum_menu button:not(.pinned):hover {
+	background-color: var(--green-opacity);
+}
+.forum_menu button:not(.pinned):hover svg {
+	color: var(--green-light);
 }
 .forum_menu .options_container {
 	position: absolute;
@@ -284,6 +325,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	transition: var(--transition);
 	scale: 0;
 	transform-origin: top right;
+	z-index: 2;
 }
 .forum_menu button + .options_container.clicked {
 	scale: 1;
@@ -320,7 +362,89 @@ main section.coins_table .nav-link:not(.active):hover {
 .options_container .each_social span.icon svg {
 	font-size: 0.9001rem;
 }
-/* .options_container .each_social a spn */
+.user_in_coin_forum_body {
+	padding: 1rem 0;
+}
+.user_in_coin_forum_body span {
+	font-size: 0.85rem;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+}
+.forum_post_footer_inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.forum_post_footer_inner .date_time {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+.forum_post_footer_inner .date_time :is(span, svg) {
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+}
+.forum_post_footer_inner .date_time:hover :is(svg, span) {
+	color: var(--text-clr);
+}
+.forum_post_footer_inner .date_time svg {
+	color: var(--grey_1);
+	font-size: 0.8rem;
+}
+.forum_post_footer_inner .date_time span {
+	font-size: 0.8rem;
+	letter-spacing: 0.3px;
+	font-weight: 600;
+	color: var(--grey_1);
+}
+.forum_post_footer_inner .post_info {
+	display: flex;
+	gap: 14px;
+	align-items: center;
+}
+.forum_post_footer_inner .post_info .icon svg {
+	font-size: 1.2rem;
+}
+.forum_post_footer_inner .post_info :is(.text, .tag) {
+	position: relative;
+	font-size: 0.68rem;
+}
+.forum_post_footer_inner .post_info .tag {
+	padding: 1px 5px 0;
+	border-radius: 3px;
+	line-height: 1.5;
+	align-items: center;
+	position: relative;
+	box-shadow: rgb(149 157 165 / 20%) 0px 0 84px;
+	background-color: var(--white);
+	border-top: 1px solid var(--border-clr);
+	border-right: 1px solid var(--border-clr);
+	border-bottom: 1px solid var(--border-clr);
+}
+.forum_post_footer_inner .post_info .tag .value {
+	position: relative;
+}
+.forum_post_footer_inner .post_info .tag::before {
+	border-bottom: 1px solid var(--border-clr);
+	border-left: 1px solid var(--border-clr);
+	background-color: var(--white);
+	aspect-ratio: 1 / 1;
+	content: "";
+	/* z-index: -1; */
+	left: 0;
+	box-shadow: rgb(149 157 165 / 20%) 0px 0 84px;
+	top: 50%;
+	position: absolute;
+	width: 12px;
+	translate: -50% -50%;
+	rotate: 45deg;
+}
+.forum_post_footer_inner .post_info > span {
+	gap: 10px;
+}
 /* section one @e */
 
 /* section two @s */

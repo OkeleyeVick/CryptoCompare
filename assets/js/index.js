@@ -3,7 +3,10 @@ const mobileMenu = document.querySelector(".mobile_menu_container");
 const dropdownLinks = document.querySelectorAll(".sub-header .has-icon");
 const stickyHeader = document.querySelector(".sub-header");
 const forum_option_buttons = document.querySelectorAll(".forum_menu > button");
+const modalTitle = document.querySelector(".modal .modal-header .modal-title");
+const modalToggleButtons = document.querySelectorAll(".modal .nav-pills .nav-link");
 
+console.log(modalTitle);
 // events
 mobileMenuButton.addEventListener("click", toggleMobileMenu);
 forum_option_buttons.forEach((button) => {
@@ -11,6 +14,12 @@ forum_option_buttons.forEach((button) => {
 		e.stopPropagation();
 		const dropdown = this.nextElementSibling;
 		dropdown.classList.toggle("clicked");
+	});
+});
+
+modalToggleButtons.forEach((button) => {
+	button.addEventListener("click", function () {
+		this.parentElement.classList.contains("sign_up") ? (modalTitle.textContent = `Register`) : (modalTitle.textContent = `Sign In`);
 	});
 });
 

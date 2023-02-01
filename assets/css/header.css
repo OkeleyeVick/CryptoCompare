@@ -371,9 +371,140 @@ header .modal {
 		padding: 1rem;
 	}
 }
+.modal-body {
+	padding-bottom: 1.5rem;
+}
+.modal-body .pre_form {
+	margin-bottom: 0.5rem;
+}
+.modal .modal-header button {
+	border-radius: 100vw;
+}
+.modal .modal-header button:hover {
+	background-color: var(--grey_2);
+	color: var(--green-lighter);
+}
+.modal-body .pre_form {
+	margin: 0.5rem 0;
+}
+.modal-body .pre_form span {
+	color: var(--font-clr);
+	font-size: 0.9rem;
+	line-height: 1.5;
+	display: flex;
+}
 .modal_body_inner .nav-pills {
 	justify-content: center;
 	gap: 0.8rem;
+	padding-bottom: 0.5rem;
+}
+.modal .modal-title {
+	flex-grow: 2;
+	text-align: center;
+}
+.modal .nav-pills .nav-item .nav-link {
+	border: 1.5px solid var(--border-clr);
+	text-transform: uppercase;
+	color: var(--text-clr);
+	font-size: 0.8rem;
+	font-weight: 600;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+	letter-spacing: 0.3px;
+}
+.modal .nav-pills .nav-item .nav-link:hover {
+	background-color: var(--green-lighter);
+	color: var(--white);
+}
+.modal .nav-pills .nav-item .nav-link.active {
+	border: 1.5px solid var(--green-lighter);
+	color: var(--white);
+	background-color: var(--green-lighter);
+}
+.modal .nav-pills .nav-item .nav-link.active:hover {
+	background-color: var(--green-light);
+	border-color: var(--green-light);
+}
+.modal form .form-control {
+	min-height: 3rem;
+}
+.modal form .form-control:focus {
+	border: 2px solid var(--green-lighter);
+	box-shadow: none;
+}
+.modal form .form-control {
+	font-size: 0.89rem;
+	color: var(--font-clr);
+}
+.modal form .form-control::placeholder {
+	font-size: 0.89rem;
+	color: var(--grey_1);
+}
+.modal form .form-label {
+	font-size: 0.88rem;
+	color: var(--text-clr);
+	margin-bottom: 3px;
+	line-height: 1;
+}
+.modal .form-input .forgot_password a {
+	color: var(--green-lighter);
+	font-weight: 500;
+	font-size: 0.8rem;
+}
+.modal form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.2rem;
+}
+.modal .submit_button button {
+	background-color: var(--green-lighter);
+	color: var(--white);
+	font-weight: 600;
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+	transition: var(--transition);
+	display: block;
+	border: none;
+	font-size: 0.9rem;
+	min-height: 3rem;
+	width: 100%;
+	border-radius: 6px;
+}
+.modal .submit_button button:hover {
+	background-color: var(--green-light);
+}
+.modal-content .modal-footer {
+	display: none;
+}
+.modal-content:has(.sign_up .nav-link.active) .modal-footer {
+	display: block;
+	padding: 0;
+}
+.modal-footer {
+	overflow: hidden;
+}
+.modal_footer_inner {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--green-lighter);
+	row-gap: 0.5rem;
+	margin: 0;
+	padding: 1rem;
+}
+.modal_footer_inner span {
+	font-size: 0.8rem;
+	color: var(--white);
+	word-spacing: 0.5px;
+}
+.modal_footer_inner span a {
+	text-decoration: 1px solid underline;
+	color: var(--white);
+	font-size: 0.78rem;
 }
 /* ============ mobile nav bars @e ========== */
 /* nav bars @e */
