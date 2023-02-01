@@ -994,7 +994,7 @@
 															</span>
 														</div>
 														<div class="forum_post_footer">
-															<div class="forum_post_footer_inner">
+															<div class="forum_post_footer_inner flex-wrap gap-2">
 																<div class="date_time">
 																	<svg
 																		xmlns="http://www.w3.org/2000/svg"
@@ -1014,68 +1014,74 @@
 																	<span> 14 days ago </span>
 																</div>
 																<div class="post_info">
-																	<span class="d-flex align-items-center">
-																		<span class="icon">
-																			<svg
-																				xmlns="http://www.w3.org/2000/svg"
-																				width="1em"
-																				height="1em"
-																				viewBox="0 0 24 24">
-																				<path
-																					fill="currentColor"
-																					d="M4 19.999a.999.999 0 0 1-1-1v-1a9.98 9.98 0 0 1 8-9.796V6.499c0-.534.208-1.036.585-1.414c.756-.757 2.075-.756 2.829-.001l6.288 6.203a.996.996 0 0 1 0 1.424l-6.293 6.207c-.746.746-2.067.751-2.823-.005A1.986 1.986 0 0 1 11 17.499v-1.437c-2.495.201-4.523.985-6.164 3.484a1 1 0 0 1-.836.453zm8-5.989l1-.01v3.499l5.576-5.5L13 6.503V10s-.384-.004-.891.052a7.982 7.982 0 0 0-6.892 6.08C7.338 14.404 9.768 14.066 12 14.01z" />
-																			</svg>
-																			<!-- <svg
-																				xmlns="http://www.w3.org/2000/svg"
-																				width="1.13em"
-																				height="1em"
-																				viewBox="0 0 1792 1600">
-																				<g transform="rotate(180 896 800) translate(0 1600) scale(1 -1)">
+																	<a href="">
+																		<span class="d-flex align-items-center">
+																			<span class="icon reply">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
 																					<path
 																						fill="currentColor"
-																						d="M1792 576q0 26-19 45l-512 512q-19 19-45 19t-45-19t-19-45V832H928q-98 0-175.5 6t-154 21.5t-133 42.5T360 971.5t-80 101t-48.5 138.5t-17.5 181q0 55 5 123q0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17q-7-9-13-22t-13.5-30t-10.5-24Q0 1222 0 1056q0-199 53-333q162-403 875-403h224V64q0-26 19-45t45-19t45 19l512 512q19 19 19 45z" />
-																				</g>
-																			</svg> -->
+																						d="M4 19.999a.999.999 0 0 1-1-1v-1a9.98 9.98 0 0 1 8-9.796V6.499c0-.534.208-1.036.585-1.414c.756-.757 2.075-.756 2.829-.001l6.288 6.203a.996.996 0 0 1 0 1.424l-6.293 6.207c-.746.746-2.067.751-2.823-.005A1.986 1.986 0 0 1 11 17.499v-1.437c-2.495.201-4.523.985-6.164 3.484a1 1 0 0 1-.836.453zm8-5.989l1-.01v3.499l5.576-5.5L13 6.503V10s-.384-.004-.891.052a7.982 7.982 0 0 0-6.892 6.08C7.338 14.404 9.768 14.066 12 14.01z" />
+																				</svg>
+																				<!-- <svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1.13em"
+																					height="1em"
+																					viewBox="0 0 1792 1600">
+																					<g transform="rotate(180 896 800) translate(0 1600) scale(1 -1)">
+																						<path
+																							fill="currentColor"
+																							d="M1792 576q0 26-19 45l-512 512q-19 19-45 19t-45-19t-19-45V832H928q-98 0-175.5 6t-154 21.5t-133 42.5T360 971.5t-80 101t-48.5 138.5t-17.5 181q0 55 5 123q0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17q-7-9-13-22t-13.5-30t-10.5-24Q0 1222 0 1056q0-199 53-333q162-403 875-403h224V64q0-26 19-45t45-19t45 19l512 512q19 19 19 45z" />
+																					</g>
+																				</svg> -->
+																			</span>
+																			<span class="text d-none d-md-inline"> Replies </span>
+																			<span class="tag">
+																				<span class="value"> 205 </span>
+																			</span>
 																		</span>
-																		<span class="text"> Replies </span>
-																		<span class="tag">
-																			<span class="value"> 205 </span>
+																	</a>
+																	<a href="">
+																		<span class="d-flex align-items-center">
+																			<span class="icon like">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z" />
+																				</svg>
+																			</span>
+																			<span class="text d-none d-md-inline"> Agree </span>
+																			<span class="tag">
+																				<span class="value"> 205 </span>
+																			</span>
 																		</span>
-																	</span>
-																	<span class="d-flex align-items-center">
-																		<span class="icon">
-																			<svg
-																				xmlns="http://www.w3.org/2000/svg"
-																				width="1em"
-																				height="1em"
-																				viewBox="0 0 24 24">
-																				<path
-																					fill="currentColor"
-																					d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z" />
-																			</svg>
+																	</a>
+																	<a href="">
+																		<span class="d-flex align-items-center">
+																			<span class="icon dislike">
+																				<svg
+																					xmlns="http://www.w3.org/2000/svg"
+																					width="1em"
+																					height="1em"
+																					viewBox="0 0 24 24">
+																					<path
+																						fill="currentColor"
+																						d="M20 3H6.693A2.01 2.01 0 0 0 4.82 4.298l-2.757 7.351A1 1 0 0 0 2 12v2c0 1.103.897 2 2 2h5.612L8.49 19.367a2.004 2.004 0 0 0 .274 1.802c.376.52.982.831 1.624.831H12c.297 0 .578-.132.769-.36l4.7-5.64H20c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-8.469 17h-1.145l1.562-4.684A1 1 0 0 0 11 14H4v-1.819L6.693 5H16v9.638L11.531 20zM18 14V5h2l.001 9H18z" />
+																				</svg>
+																			</span>
+																			<span class="text d-none d-md-inline"> Disagree </span>
+																			<span class="tag">
+																				<span class="value"> 205 </span>
+																			</span>
 																		</span>
-																		<span class="text"> Agree </span>
-																		<span class="tag">
-																			<span class="value"> 205 </span>
-																		</span>
-																	</span>
-																	<span class="d-flex align-items-center">
-																		<span class="icon">
-																			<svg
-																				xmlns="http://www.w3.org/2000/svg"
-																				width="1em"
-																				height="1em"
-																				viewBox="0 0 24 24">
-																				<path
-																					fill="currentColor"
-																					d="M20 3H6.693A2.01 2.01 0 0 0 4.82 4.298l-2.757 7.351A1 1 0 0 0 2 12v2c0 1.103.897 2 2 2h5.612L8.49 19.367a2.004 2.004 0 0 0 .274 1.802c.376.52.982.831 1.624.831H12c.297 0 .578-.132.769-.36l4.7-5.64H20c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-8.469 17h-1.145l1.562-4.684A1 1 0 0 0 11 14H4v-1.819L6.693 5H16v9.638L11.531 20zM18 14V5h2l.001 9H18z" />
-																			</svg>
-																		</span>
-																		<span class="text"> Disagree </span>
-																		<span class="tag">
-																			<span class="value"> 205 </span>
-																		</span>
-																	</span>
+																	</a>
 																</div>
 															</div>
 														</div>

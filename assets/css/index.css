@@ -367,6 +367,9 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 .user_in_coin_forum_body span {
 	font-size: 0.85rem;
+}
+.user_in_coin_forum_body a {
+	font-size: 0.85rem;
 	-webkit-line-clamp: 3;
 	line-clamp: 3;
 }
@@ -380,7 +383,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	gap: 4px;
 	align-items: center;
 }
-.forum_post_footer_inner .date_time :is(span, svg) {
+.forum_post_footer_inner .date_time :is(a, svg) {
 	-webkit-transition: var(--transition);
 	-moz-transition: var(--transition);
 	-ms-transition: var(--transition);
@@ -402,11 +405,17 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 .forum_post_footer_inner .post_info {
 	display: flex;
-	gap: 14px;
+	gap: 1.5rem;
 	align-items: center;
 }
 .forum_post_footer_inner .post_info .icon svg {
-	font-size: 1.2rem;
+	font-size: 0.9rem;
+}
+.forum_post_footer_inner .post_info .icon.reply {
+	color: var(--font-clr);
+}
+.forum_post_footer_inner .post_info .icon.reply svg {
+	font-size: 1.05rem;
 }
 .forum_post_footer_inner .post_info :is(.text, .tag) {
 	position: relative;
@@ -416,6 +425,7 @@ main section.coins_table .nav-link:not(.active):hover {
 	padding: 1px 5px 0;
 	border-radius: 3px;
 	line-height: 1.5;
+	margin-right: -5px;
 	align-items: center;
 	position: relative;
 	box-shadow: rgb(149 157 165 / 20%) 0px 0 84px;
@@ -426,6 +436,7 @@ main section.coins_table .nav-link:not(.active):hover {
 }
 .forum_post_footer_inner .post_info .tag .value {
 	position: relative;
+	color: var(--text-clr);
 }
 .forum_post_footer_inner .post_info .tag::before {
 	border-bottom: 1px solid var(--border-clr);
@@ -433,7 +444,6 @@ main section.coins_table .nav-link:not(.active):hover {
 	background-color: var(--white);
 	aspect-ratio: 1 / 1;
 	content: "";
-	/* z-index: -1; */
 	left: 0;
 	box-shadow: rgb(149 157 165 / 20%) 0px 0 84px;
 	top: 50%;
@@ -442,8 +452,23 @@ main section.coins_table .nav-link:not(.active):hover {
 	translate: -50% -50%;
 	rotate: 45deg;
 }
-.forum_post_footer_inner .post_info > span {
-	gap: 10px;
+.forum_post_footer_inner .post_info a .text {
+	margin: 0 8px 0 0;
+	color: var(--text-clr);
+}
+.forum_post_footer_inner .post_info a > span {
+	gap: 5px;
+}
+@media all and (max-width: 768px) {
+	.forum_post_footer_inner .post_info a > span {
+		gap: 11px;
+	}
+}
+.forum_post_footer_inner .like svg {
+	color: var(--green-lighter);
+}
+.forum_post_footer_inner .dislike svg {
+	color: var(--red);
 }
 /* section one @e */
 
